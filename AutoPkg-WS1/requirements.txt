@@ -1,6 +1,6 @@
 # These are needed for AutoPkg custom processor WorkSpaceOneImporter
 # install using
-# sudo -H --preserve-env=http_proxy,https_proxy,PIP_CERT /Library/AutoPkg/Python3/Python.framework/Versions/Current/bin/pip3 install -r AutoPkg/AutoPkg-WS1/requirements.txt
+# sudo -H --preserve-env=http_proxy,https_proxy,PIP_CERT /Library/AutoPkg/Python3/Python.framework/Versions/Current/bin/pip3 install -r AutoPkg-WS1/requirements.txt
 
 # latest tested and known good
 urllib3==2.6.3
