@@ -65,11 +65,11 @@ exit 0
 			<key>MSOfficeMacURLandUpdateInfoProvider</key>
 			<dict>
 				<key>git_hash</key>
-				<string>2d68a0454fd0fb1711f43bd3b31a5c93e508f0a8</string>
+				<string>80e08109567f95ac6bf1ca6e40fa0a4d2fc3b2fa</string>
 				<key>path</key>
-				<string>/Users/Shared/PSU Demos/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOfficeMacURLandUpdateInfoProvider.py</string>
+				<string>~/dev/cloud-autopkg-runner-examples/AutoPkg/Repos/com.github.autopkg.recipes/MSOfficeUpdates/MSOfficeMacURLandUpdateInfoProvider.py</string>
 				<key>sha256_hash</key>
-				<string>1361330c7cf9e255839b67b1f0a57f255bb3287abe83f6898c391bc148750e91</string>
+				<string>5a93c2ef86d96879118088ae2aaf1dc8b351654f81520c8f606787b28690469d</string>
 			</dict>
 		</dict>
 		<key>parent_recipes</key>
@@ -79,7 +79,7 @@ exit 0
 				<key>git_hash</key>
 				<string>db02edcc4fad1325e3f44ea31aa387a4ad39c998</string>
 				<key>path</key>
-				<string>/Users/Shared/PSU Demos/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOfficeMacProduct.download.recipe</string>
+				<string>~/dev/cloud-autopkg-runner-examples/AutoPkg/Repos/com.github.autopkg.recipes/MSOfficeUpdates/MSOfficeMacProduct.download.recipe</string>
 				<key>sha256_hash</key>
 				<string>c7f9b0fa0e3634c0aab69e3248da0dca823e0749304a70c45272bbcb9db84df8</string>
 			</dict>
@@ -88,7 +88,7 @@ exit 0
 				<key>git_hash</key>
 				<string>a635a1d811c437f8c050995f2b29dedd2b5c8c3d</string>
 				<key>path</key>
-				<string>/Users/Shared/PSU Demos/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSTeams2.download.recipe</string>
+				<string>~/dev/cloud-autopkg-runner-examples/AutoPkg/Repos/com.github.autopkg.recipes/MSOfficeUpdates/MSTeams2.download.recipe</string>
 				<key>sha256_hash</key>
 				<string>00c49b22f492017eb11d835dfad2456001494238b49fdb47256ac8633bfb6b70</string>
 			</dict>
@@ -97,7 +97,7 @@ exit 0
 				<key>git_hash</key>
 				<string>1c73252ecbaa7ec9dc47b41210d2b69062ee2d22</string>
 				<key>path</key>
-				<string>/Users/Shared/PSU Demos/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSTeams2.munki.recipe</string>
+				<string>~/dev/cloud-autopkg-runner-examples/AutoPkg/Repos/com.github.autopkg.recipes/MSOfficeUpdates/MSTeams2.munki.recipe</string>
 				<key>sha256_hash</key>
 				<string>97cafc6a96131afb716fadb75aaf16c911a01840c9c7b962020e968cae75e3ec</string>
 			</dict>
