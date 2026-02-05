@@ -1,1 +1,22 @@
-["Firefox.munki.recipe.yaml", "GoogleChrome.munki.recipe", "MSTeams.munki.recipe"]
+[
+    "Firefox.munki.recipe.yaml",
+    "GoogleChrome.munki.recipe",
+    "MSTeams.munki.recipe",
+    "iMazing.munki.recipe",
+    "1Password.munki.recipe",
+    "AWSCLI.munki.recipe",
+    "Docker.download.recipe",
+    "Eclipse.munki.recipe",
+    "MSExcel.munki.recipe",
+    "MSOneNote.munki.recipe",
+    "MSOutlook.munki.recipe",
+    "MSPowerPoint.munki.recipe",
+    "MSWord.munki.recipe",
+    "MSWord.munki.recipe",
+    "OktaVerify.munki.recipe",
+    "ParallelsDesktop.munki.recipe",
+    "TheUnarchiver.munki.recipe",
+    "TunnelBlick.munki.recipe",
+    "VLC.munki.recipe",
+    "Wireshark.munki.recipe",
+]
