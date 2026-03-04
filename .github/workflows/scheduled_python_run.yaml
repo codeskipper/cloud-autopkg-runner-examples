@@ -72,6 +72,17 @@ jobs:
         run: |
           uv run examples/git_worktree_example.py
 
+      - name: Commit updated metadata
+        run: |
+          git add metadata_cache.json
+
+          if git diff --cached --quiet; then
+            echo "No metadata changes detected."
+          else
+            git commit -m "Update metadata_cache.json"
+            git push
+          fi
+
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
