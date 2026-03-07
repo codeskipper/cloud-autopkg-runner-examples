@@ -122,7 +122,6 @@ async def main() -> None:
     recipe_paths = [await recipe_finder.find_recipe(r) for r in recipe_list]
 
     cache_plugin = get_cache_plugin()
-
     async with cache_plugin:
         await asyncio.gather(
             *(
