@@ -1,0 +1,13 @@
+{
+    "GoogleChrome.munki.recipe": {
+        "timestamp": "2026-03-07 18:12:00.576070+00:00",
+        "metadata": [
+            {
+                "etag": "\"5858c8b\"",
+                "file_size": 243098402,
+                "last_modified": "Tue, 03 Mar 2026 19:03:40 GMT",
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.GoogleChrome/downloads/GoogleChrome.dmg"
+            }
+        ]
+    }
+}
