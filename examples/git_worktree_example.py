@@ -12,6 +12,7 @@ from cloud_autopkg_runner import (
     Recipe,
     RecipeFinder,
     Settings,
+    get_cache_plugin,
     logging_config,
     shell,
 )
@@ -118,12 +119,13 @@ async def main() -> None:
     recipe_list = json.loads((autopkg_dir / "recipe_list.json").read_text())
     recipe_paths = [await recipe_finder.find_recipe(r) for r in recipe_list]
 
-    await asyncio.gather(
-        *(
-            process_recipe(recipe, git_repo_root, autopkg_prefs.clone())
-            for recipe in recipe_paths
+    async with get_cache_plugin():
+        await asyncio.gather(
+            *(
+                process_recipe(recipe, git_repo_root, autopkg_prefs.clone())
+                for recipe in recipe_paths
+            )
         )
-    )
 
 
 if __name__ == "__main__":
