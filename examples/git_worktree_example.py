@@ -121,14 +121,19 @@ async def main() -> None:
     recipe_list = json.loads((autopkg_dir / "recipe_list.json").read_text())
     recipe_paths = [await recipe_finder.find_recipe(r) for r in recipe_list]
 
-    async with get_cache_plugin():
+    cache_plugin = get_cache_plugin()
+
+    async with cache_plugin:
         await asyncio.gather(
             *(
                 process_recipe(recipe, git_repo_root, autopkg_prefs.clone())
                 for recipe in recipe_paths
             )
         )
-    logger.debug("All recipes processed, metadata should have been written by now.")
+        # Explicitly save the cache after all recipes are processed.
+        # The __aexit__ method of the context manager should handle saving automatically, but it does not somehow.
+        await cache_plugin.save()
+    logger.debug("All recipes processed, any updated metadata should have been saved by now.")
 
 
 if __name__ == "__main__":
