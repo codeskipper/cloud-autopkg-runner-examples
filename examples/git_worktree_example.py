@@ -115,6 +115,8 @@ async def main() -> None:
 
     logging_config.initialize_logger(settings.verbosity_level, str(settings.log_file))
 
+    logger = logging_config.get_logger(__name__)
+
     recipe_finder = RecipeFinder(autopkg_prefs)
     recipe_list = json.loads((autopkg_dir / "recipe_list.json").read_text())
     recipe_paths = [await recipe_finder.find_recipe(r) for r in recipe_list]
@@ -126,6 +128,7 @@ async def main() -> None:
                 for recipe in recipe_paths
             )
         )
+    logger.debug("All recipes processed, metadata should have been written by now.")
 
 
 if __name__ == "__main__":
