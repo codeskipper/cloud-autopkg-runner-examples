@@ -9,5 +9,26 @@
                 "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.GoogleChrome/downloads/GoogleChrome.dmg"
             }
         ]
+    },
+    "Firefox.munki.recipe.yaml": {
+        "timestamp": "2026-03-09 16:18:00.296322+00:00",
+        "metadata": [
+            {
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.Firefox/downloads/Firefox.dmg",
+                "file_size": 149340787,
+                "etag": "\"f22409f21849d1dc366ee0a5f2acae1c\"",
+                "last_modified": "Mon, 23 Feb 2026 14:03:55 GMT"
+            }
+        ]
+    },
+    "MSTeams.munki.recipe": {
+        "timestamp": "2026-03-09 16:18:07.090961+00:00",
+        "metadata": [
+            {
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.MSTeams/downloads/MSTeams-26032.605.4378.6183.pkg",
+                "file_size": 348878194,
+                "last_modified": "Thu, 12 Feb 2026 06:28:30 GMT"
+            }
+        ]
     }
 }
