@@ -87,7 +87,7 @@ wheels = [
 [[package]]
 name = "cloud-autopkg-runner"
 version = "0.27.0"
-source = { git = "https://github.com/codeskipper/cloud-autopkg-runner.git?branch=troublehooting-could-not-find-parent-recipe#b95d1e7e3cd53eae92dccef67436e5d637967228" }
+source = { git = "https://github.com/codeskipper/cloud-autopkg-runner.git?branch=troublehooting-could-not-find-parent-recipe#deedee3e109738d65ceb0a538d0d5b8afed10e52" }
 dependencies = [
     { name = "pyyaml" },
     { name = "tomli", marker = "python_full_version < '3.11'" },
