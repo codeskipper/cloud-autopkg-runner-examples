@@ -1,23 +1,23 @@
 {
     "GoogleChrome.munki.recipe": {
-        "timestamp": "2026-03-07 18:12:00.576070+00:00",
+        "timestamp": "2026-03-14 05:57:24.721290+00:00",
         "metadata": [
             {
-                "etag": "\"5858c8b\"",
-                "file_size": 243098402,
-                "last_modified": "Tue, 03 Mar 2026 19:03:40 GMT",
-                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.GoogleChrome/downloads/GoogleChrome.dmg"
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.GoogleChrome/downloads/GoogleChrome.dmg",
+                "file_size": 250155035,
+                "etag": "\"595799c\"",
+                "last_modified": "Sat, 14 Mar 2026 01:18:39 GMT"
             }
         ]
     },
     "Firefox.munki.recipe.yaml": {
-        "timestamp": "2026-03-09 16:18:00.296322+00:00",
+        "timestamp": "2026-03-14 05:57:24.349453+00:00",
         "metadata": [
             {
                 "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.Firefox/downloads/Firefox.dmg",
-                "file_size": 149340787,
-                "etag": "\"f22409f21849d1dc366ee0a5f2acae1c\"",
-                "last_modified": "Mon, 23 Feb 2026 14:03:55 GMT"
+                "file_size": 149197739,
+                "etag": "\"3a72fc980454a365a67ed40bb9e67e7c\"",
+                "last_modified": "Mon, 09 Mar 2026 18:33:57 GMT"
             }
         ]
     },
