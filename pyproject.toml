@@ -6,6 +6,9 @@ dependencies = [
     "cloud-autopkg-runner>=0.27.0",
 ]
 
+[tool.uv.sources]
+cloud-autopkg-runner = { git = "https://github.com/codeskipper/cloud-autopkg-runner.git", branch = "troublehooting-could-not-find-parent-recipe" }
+
 [tool.pyright]
 extraPaths = ["."]
 include = ["."]
