@@ -68,6 +68,8 @@ jobs:
           # debug statement
           echo "[DEBUG] dumping ~/Library/Preferences/com.github.autopkg.plist"
           defaults read ~/Library/Preferences/com.github.autopkg.plist
+          echo "[DEBUG] running [defaults read com.github.autopkg]"
+          defaults read com.github.autopkg
           ls -al "${AUTOPKG_DIR}"
 
 
