@@ -83,7 +83,7 @@ jobs:
           defaults read com.github.autopkg
 
           # get AutoPkg to show its preferences
-          echo "[DEBUG] running the info subcommand with autopkg to show its settings
+          echo "[DEBUG] running the info subcommand with autopkg to show its settings"
           autopkg info
 
       - name: Run AutoPkg
