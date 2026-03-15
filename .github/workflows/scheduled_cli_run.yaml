@@ -70,15 +70,24 @@ jobs:
         run: |
           cat "AutoPkg/repo_list.txt" | xargs autopkg repo-add
 
-      - name: Run AutoPkg
+      - name: Debug AutoPkg settings issue
         run: |
+          ## debug statements to troubleshoot missing repos in keys/values RECIPE_SEARCH_DIRS and RECIPE_REPOS
+          echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist"
+          cat ~/Library/Preferences/com.github.autopkg.plist
 
-          # debug statements
           echo "[DEBUG] dumping ~/Library/Preferences/com.github.autopkg.plist"
           defaults read ~/Library/Preferences/com.github.autopkg.plist
+
           echo "[DEBUG] running [defaults read com.github.autopkg]"
           defaults read com.github.autopkg
 
+          # get AutoPkg to show its preferences
+          echo "[DEBUG] running the info subcommand with autopkg to show its settings
+          autopkg info
+
+      - name: Run AutoPkg
+        run: |
           uv run cloud-autopkg-runner -vvv \
             --recipe-list AutoPkg/recipe_list.json \
             --cache-file metadata_cache.json \
