@@ -22,12 +22,12 @@
         ]
     },
     "MSTeams.munki.recipe": {
-        "timestamp": "2026-03-15 09:14:29.039574+00:00",
+        "timestamp": "2026-03-15 15:53:54.070328+00:00",
         "metadata": [
             {
-                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.MSTeams/downloads/MSTeams-26032.605.4378.6183.pkg",
-                "file_size": 348878194,
-                "last_modified": "Thu, 12 Feb 2026 06:28:30 GMT"
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.MSTeams/downloads/MSTeams-26043.2109.4484.3337.pkg",
+                "file_size": 349095445,
+                "last_modified": "Thu, 12 Mar 2026 22:18:45 GMT"
             }
         ]
     }
