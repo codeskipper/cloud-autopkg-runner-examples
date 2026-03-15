@@ -65,14 +65,6 @@ jobs:
           defaults write com.github.autopkg RECIPE_OVERRIDE_DIRS "${AUTOPKG_DIR}/Overrides"
           defaults write com.github.autopkg RECIPE_REPO_DIR "${AUTOPKG_DIR}/RecipeRepos"
 
-          # debug statement
-          echo "[DEBUG] dumping ~/Library/Preferences/com.github.autopkg.plist"
-          defaults read ~/Library/Preferences/com.github.autopkg.plist
-          echo "[DEBUG] running [defaults read com.github.autopkg]"
-          defaults read com.github.autopkg
-          ls -al "${AUTOPKG_DIR}"
-
-
 
       - name: AutoPkg Repo Add
         run: |
@@ -80,6 +72,13 @@ jobs:
 
       - name: Run AutoPkg
         run: |
+
+          # debug statements
+          echo "[DEBUG] dumping ~/Library/Preferences/com.github.autopkg.plist"
+          defaults read ~/Library/Preferences/com.github.autopkg.plist
+          echo "[DEBUG] running [defaults read com.github.autopkg]"
+          defaults read com.github.autopkg
+
           uv run cloud-autopkg-runner -vvv \
             --recipe-list AutoPkg/recipe_list.json \
             --cache-file metadata_cache.json \
