@@ -73,6 +73,8 @@ jobs:
       - name: Debug AutoPkg settings issue
         run: |
           ## debug statements to troubleshoot missing repos in keys/values RECIPE_SEARCH_DIRS and RECIPE_REPOS
+          echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist with plutil to convert to json for readability"
+          plutil -convert json -r -o - ~/Library/Preferences/com.github.autopkg.plist
 #          sleep 20 # give the system a moment or two to write the plist file after setting the defaults
 
 #          # echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist"
@@ -81,9 +83,6 @@ jobs:
 #
 #          echo "[DEBUG] running defaults read ~/Library/Preferences/com.github.autopkg.plist"
 #          defaults read ~/Library/Preferences/com.github.autopkg.plist
-
-          echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist with plutil to convert to json for readability"
-          plutil -convert json -r -o - ~/Library/Preferences/com.github.autopkg.plist
 
 #          echo "[DEBUG] running [defaults read com.github.autopkg]"
 #          defaults read com.github.autopkg
