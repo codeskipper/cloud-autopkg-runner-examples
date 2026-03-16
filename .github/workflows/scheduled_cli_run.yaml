@@ -73,7 +73,7 @@ jobs:
       - name: Debug AutoPkg settings issue
         run: |
           ## debug statements to troubleshoot missing repos in keys/values RECIPE_SEARCH_DIRS and RECIPE_REPOS
-          sleep 2 # give the system a moment to write the plist file after setting the defaults
+          sleep 20 # give the system a moment to write the plist file after setting the defaults
 #          # echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist"
 #          # does not work because the plist file is binary, but leaving here for reference
 #          # cat ~/Library/Preferences/com.github.autopkg.plist
