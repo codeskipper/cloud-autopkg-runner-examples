@@ -73,25 +73,39 @@ jobs:
       - name: Debug AutoPkg settings issue
         run: |
           ## debug statements to troubleshoot missing repos in keys/values RECIPE_SEARCH_DIRS and RECIPE_REPOS
+          ## These settings are set in the previous step using defaults write, but they do not seem to be picked up by
+          ## AutoPkg when we run it, and the RECIPE_SEARCH_DIRS and RECIPE_REPOS keys often go missing.
+          ## This is a problem because if/when AutoPkg does not pick up those settings, it throws error
+          ## "Could not find parent recipe..." for each recipe in the recipe list.
+          ## The following debug statements are an attempt to troubleshoot and workaround this issue and if possible, to
+          ## figure out why AutoPkg is sometimes not picking up those settings.
 
-          # get AutoPkg to show its preferences
-          echo "[DEBUG] running the info subcommand with AutoPkg to show its settings"
-          autopkg info
+          echo "[DEBUG] running defaults read ~/Library/Preferences/com.github.autopkg.plist"
+          # This appears to work well, and shows the keys/values we set in the previous step, and it seems that AutoPkg
+          # is then picking up those settings
+          defaults read ~/Library/Preferences/com.github.autopkg.plist
 
-#          echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist with plutil to convert to json for readability"
-#          plutil -convert json -r -o - ~/Library/Preferences/com.github.autopkg.plist
-#          sleep 20 # give the system a moment or two to write the plist file after setting the defaults
+          # echo "[DEBUG] running [defaults read com.github.autopkg]"
+          # This appears to work and shows the keys/values we set in the previous step, and it seems that AutoPkg is then picking up those settings
+          # But it does not help to show which path is being used for the plist file.  Leaving here for reference.
+          # defaults read com.github.autopkg
 
-#          # echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist"
-#          # does not work because the plist file is binary, but leaving here for reference
-#          # cat ~/Library/Preferences/com.github.autopkg.plist
-#
-#          echo "[DEBUG] running defaults read ~/Library/Preferences/com.github.autopkg.plist"
-#          defaults read ~/Library/Preferences/com.github.autopkg.plist
+          # echo "[DEBUG] give the system a moment or two to write the plist file after setting the defaults."
+          # 2 seconds is NOT enough.
+          # sleep 20
 
-#          echo "[DEBUG] running [defaults read com.github.autopkg]"
-#          defaults read com.github.autopkg
-#
+          # echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist"
+          # does not work because the plist file is binary, but leaving here for reference
+          # cat ~/Library/Preferences/com.github.autopkg.plist
+
+          # echo "[DEBUG] dumping content of ~/Library/Preferences/com.github.autopkg.plist with plutil to convert to json for readability"
+          # does not work because properly because it seems to ignore the defaults we set in the previous step, but leaving here for reference.
+          # The output is missing the keys/values we set for RECIPE_SEARCH_DIRS and RECIPE_REPOS
+          # plutil -convert json -r -o - ~/Library/Preferences/com.github.autopkg.plist
+
+          # get AutoPkg to show its preferences, does NOT work because it seems to ignore the defaults we set in the previous step, but leaving here for reference
+          # echo "[DEBUG] running the info subcommand with AutoPkg to show its settings"
+          # autopkg info
 
 
       - name: Run AutoPkg
