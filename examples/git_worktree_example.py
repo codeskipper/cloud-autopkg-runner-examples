@@ -131,7 +131,7 @@ async def main() -> None:
         )
         # Explicitly save the cache after all recipes are processed.
         # The __aexit__ method of the context manager should handle saving automatically, but it does not somehow.
-        await cache_plugin.save()
+        # await cache_plugin.save()
     logger.debug("All recipes processed, any updated metadata should have been saved by now.")
 
 
