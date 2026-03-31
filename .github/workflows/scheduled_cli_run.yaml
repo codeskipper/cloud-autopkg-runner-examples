@@ -80,10 +80,10 @@ jobs:
           ## The following debug statements are an attempt to troubleshoot and workaround this issue and if possible, to
           ## figure out why AutoPkg is sometimes not picking up those settings.
 
-          echo "[DEBUG] running defaults read ~/Library/Preferences/com.github.autopkg.plist"
+          echo "[DEBUG] running defaults read ~/Library/Preferences/com.github.autopkg.plist > $AUTOPKG_DIR/autopkg_prefs_dump.plist"
           # This appears to work well, and shows the keys/values we set in the previous step, and it seems that AutoPkg
           # is then picking up those settings
-          defaults read ~/Library/Preferences/com.github.autopkg.plist
+          defaults read ~/Library/Preferences/com.github.autopkg.plist > "$AUTOPKG_DIR/autopkg_prefs_dump.plist"
 
           # echo "[DEBUG] running [defaults read com.github.autopkg]"
           # This appears to work and shows the keys/values we set in the previous step, and it seems that AutoPkg is then picking up those settings
@@ -107,10 +107,15 @@ jobs:
           # echo "[DEBUG] running the info subcommand with AutoPkg to show its settings"
           # autopkg info
 
+          echo "[DEBUG] running defaults delete com.github.autopkg to make sure we're passing the AutoPkg prefs as argument instead to CAR"
+          defaults delete com.github.autopkg
+          defaults read com.github.autopkg
+
 
       - name: Run AutoPkg
         run: |
           uv run cloud-autopkg-runner -vvv \
+            --autopkg-pref-file AutoPkg/autopkg_prefs_dump.plist \
             --recipe-list AutoPkg/recipe_list.json \
             --cache-file metadata_cache.json \
             --log-file autopkg_runner.log \
