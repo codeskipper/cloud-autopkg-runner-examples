@@ -109,9 +109,15 @@ jobs:
           echo "[DEBUG] running defaults delete com.github.autopkg to make sure we're passing the AutoPkg prefs as argument instead to CAR"
           defaults delete com.github.autopkg
           # defaults read com.github.autopkg
-          echo "[DEBUG] check with ls if  ~/Library/Preferences/com.github.autopkg.plist is gone now"
+          echo "[DEBUG] rm to ensure ~/Library/Preferences/com.github.autopkg.plist is gone now"
           rm -f ~/Library/Preferences/com.github.autopkg.plist
-          ls -alh ~/Library/Preferences/com.github.autopkg.plist
+          if [ -f ~/Library/Preferences/com.github.autopkg.plist ]; then
+            echo "[DEBUG] ~/Library/Preferences/com.github.autopkg.plist still exists after delete... showing content with plutil for debugging"
+            plutil -convert json -r -o - ~/Library/Preferences/com.github.autopkg.plist
+          else
+            echo "[DEBUG] ~/Library/Preferences/com.github.autopkg.plist successfully deleted"
+          fi
+
 
 
       - name: Run AutoPkg
