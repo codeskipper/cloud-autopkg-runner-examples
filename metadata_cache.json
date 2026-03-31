@@ -1,33 +1,33 @@
 {
     "GoogleChrome.munki.recipe": {
-        "timestamp": "2026-03-14 05:57:24.721290+00:00",
+        "timestamp": "2026-03-31 14:01:25.222836+00:00",
         "metadata": [
             {
                 "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.GoogleChrome/downloads/GoogleChrome.dmg",
-                "file_size": 250155035,
-                "etag": "\"595799c\"",
-                "last_modified": "Sat, 14 Mar 2026 01:18:39 GMT"
+                "file_size": 250248940,
+                "etag": "\"59eb86c\"",
+                "last_modified": "Thu, 26 Mar 2026 16:32:44 GMT"
             }
         ]
     },
     "Firefox.munki.recipe.yaml": {
-        "timestamp": "2026-03-14 05:57:24.349453+00:00",
+        "timestamp": "2026-03-31 14:01:19.897174+00:00",
         "metadata": [
             {
                 "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.Firefox/downloads/Firefox.dmg",
-                "file_size": 149197739,
-                "etag": "\"3a72fc980454a365a67ed40bb9e67e7c\"",
-                "last_modified": "Mon, 09 Mar 2026 18:33:57 GMT"
+                "file_size": 150084627,
+                "etag": "\"4c6e6c1afdb9d742332c19385d77ed19\"",
+                "last_modified": "Mon, 23 Mar 2026 12:40:34 GMT"
             }
         ]
     },
     "MSTeams.munki.recipe": {
-        "timestamp": "2026-03-15 15:53:54.070328+00:00",
+        "timestamp": "2026-03-31 14:01:36.577817+00:00",
         "metadata": [
             {
-                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.MSTeams/downloads/MSTeams-26043.2109.4484.3337.pkg",
-                "file_size": 349095445,
-                "last_modified": "Thu, 12 Mar 2026 22:18:45 GMT"
+                "file_path": "/Users/runner/work/cloud-autopkg-runner-examples/cloud-autopkg-runner-examples/AutoPkg/Cache/local.munki.MSTeams/downloads/MSTeams-26059.604.4471.2584.pkg",
+                "file_size": 351863654,
+                "last_modified": "Mon, 09 Mar 2026 22:23:49 GMT"
             }
         ]
     }
