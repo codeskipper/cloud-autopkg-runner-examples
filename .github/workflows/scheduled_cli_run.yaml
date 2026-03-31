@@ -110,6 +110,8 @@ jobs:
           echo "[DEBUG] running defaults delete com.github.autopkg to make sure we're passing the AutoPkg prefs as argument instead to CAR"
           defaults delete com.github.autopkg
           defaults read com.github.autopkg
+          echo "[DEBUG] check with ls if  ~/Library/Preferences/com.github.autopkg.plist is gone now"
+          ls -alh ~/Library/Preferences/com.github.autopkg.plist
 
 
       - name: Run AutoPkg
